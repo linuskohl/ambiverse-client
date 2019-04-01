@@ -173,7 +173,7 @@ class OutputEntity(object):
         self.type = type
 
     def __repr__(self):
-        return '<OutputEntity(id={self.id!r}, type={self.type!r}, name={self.name!r})>'.format(self=self)
+        return '<OutputEntity(id={self.id!r}, salience={self.salience!r}, type={self.type!r}, name={self.name!r})>'.format(self=self)
 
 
 class OutputEntitySchema(Schema):
@@ -236,7 +236,7 @@ class Match(object):
         # The character offset of the match in the text, starting at 0.
         self.charOffset = charOffset
         # The entity
-        self.entity = MatchEntity
+        self.entity = entity
         # The full text of the match (equivalent to the substring of the text defined by charOffset and charLength).
         self.text = text
 
