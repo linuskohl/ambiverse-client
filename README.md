@@ -34,12 +34,13 @@ result = kg.entities(entity_list)
 
 ```py
 from ambiverseclient.clients import AmbiverseNLU
+from ambiverseclient.models import AnalyzeInput
 
 ac = AmbiverseNLU(API_ENDPOINT_HOST, port=API_ENDPOINT_PORT)
 request_doc = AnalyzeInput(docId="test", language="en")
 request_doc.text = """Brexit: UBS to move London jobs to Europe as lack of transition deal forces 'significant changes'
                       Swiss banking giant expects to merge UK entity with its German-headquartered European ..."""
-ac.analyze(inp)
+ac.analyze(request_doc)
 ```
 
 ## License
@@ -48,4 +49,4 @@ This code is distributed under the terms of the GPLv3  license.  Details can be 
 [LICENSE](LICENSE) in this repository.
 
 ## Package Author
-Linus Kohl, <linus@riskl.io>
+Linus Kohl, <linus@munichresearch.com>
