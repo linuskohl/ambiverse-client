@@ -133,7 +133,7 @@ class LabelSchema(Schema):
 class Entity(object):
     def __init__(self, id: str = None, type: str = None, names: Dict = list(), descriptions: List[str] = list(),
                  detailedDescriptions: List[str] = list(),
-                 image: Image = None, links: List[str] = list(), categories: List[Category] = list()):
+                 image: Image = None, links: List[str] = list(), categories: List[str] = list()):
         self.id = id
         # The most salient entity type.
         self.type = type
@@ -156,7 +156,8 @@ class EntitySchema(Schema):
     detailedDescriptions = fields.List(fields.Str())
     image = fields.Nested(ImageSchema)
     links = fields.List(fields.Url())
-    categories = fields.Nested(CategoriesSchema)
+    categories = fields.List(fields.Str())
+    #categories = fields.Nested(CategoriesSchema)
 
     @post_load
     def make_object(self, data):

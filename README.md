@@ -1,7 +1,5 @@
 # ambiverse-client
 
-[![](https://img.shields.io/badge/project-Risklio-green.svg?style=flat-square)](https://risklio.com/)
-
 **Note:** This client is not affiliated with Ambiverse or the Max-Planck-Institute.
 
 ## Table of Contents
