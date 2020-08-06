@@ -28,7 +28,8 @@ KnowledgeGraph Client
 *********************
 
 
-.. code-block::
+.. code-block:: python
+
     from ambiverseclient.clients import KnowledgeGraph
 
     kg = KnowledgeGraph(API_ENDPOINT_HOST, port=API_ENDPOINT_PORT)
@@ -39,7 +40,8 @@ AmbiverseNLU Client
 *******************
 
 
-.. code-block::
+.. code-block:: python
+
      from ambiverseclient.clients import AmbiverseNLU
      from ambiverseclient.models import AnalyzeInput
 
